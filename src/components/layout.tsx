@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql, useStaticQuery } from "gatsby"
 
-import Header from "./header"
+import Header from "./molecules/Header/header"
 import "./layout.css"
 
 const Layout = ({ children }) => {

@@ -1,7 +1,12 @@
 import { Link } from "gatsby"
-import * as React from "react"
+import React from "react"
 
-const Header: React.FC<{ siteTitle: String }> = ({ siteTitle }) => (
+import { SiteInfo } from "usecases"
+
+interface HeaderProps extends Pick<SiteInfo, "siteTitle"> {
+}
+
+const Header: React.FC<HeaderProps> = ({ siteTitle = "" }) => (
   <header
     style={{
       background: `rebeccapurple`,
@@ -29,9 +34,5 @@ const Header: React.FC<{ siteTitle: String }> = ({ siteTitle }) => (
     </div>
   </header>
 )
-
-Header.defaultProps = {
-  siteTitle: ``
-}
 
 export default Header
