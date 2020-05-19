@@ -46,7 +46,7 @@
     "deploy": "gatsby build && gh-pages -d public -b master",
     "storybook": "NODE_ENV=production start-storybook -s public",
     "build-storybook": "NODE_ENV=production build-storybook -s public",
-    "storybook-deploy": "build-storybook && gh-pages -r https://github.com/jpjp84/storybook.git -d storybook-static -b master"
+    "storybook-deploy": "build-storybook && gh-pages -r 'https://github.com/jpjp84/storybook.git' -d storybook-static -b master"
   },
   "repository": {
     "type": "git",
