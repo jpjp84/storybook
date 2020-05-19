@@ -3,16 +3,13 @@ import React from "react"
 
 import { SiteInfo } from "usecases"
 
+import "./header.scss"
+
 interface HeaderProps extends Pick<SiteInfo, "siteTitle"> {
 }
 
 const Header: React.FC<HeaderProps> = ({ siteTitle = "" }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`
-    }}
-  >
+  <header className={"site-header"}>
     <div
       style={{
         margin: `0 auto`,
