@@ -36,6 +36,9 @@ module.exports = {
         isTSX: true,
         allExtensions: true
       }
+    },
+    {
+      resolve: `gatsby-plugin-sass`
     }
   ],
 }
