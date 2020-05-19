@@ -19,9 +19,15 @@
     "react-helmet": "^6.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
     "@types/node": "^14.0.1",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "babel-loader": "^8.1.0",
     "gh-pages": "^2.2.0",
     "prettier": "2.0.5"
   },
@@ -37,7 +43,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "deploy": "gatsby build && gh-pages -d public -b master",
+    "storybook": "NODE_ENV=production start-storybook -s public",
+    "build-storybook": "NODE_ENV=production build-storybook -s public"
   },
   "repository": {
     "type": "git",
