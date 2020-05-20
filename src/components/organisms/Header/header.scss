@@ -1,0 +1,17 @@
+@import "src/resources/color";
+
+.site-header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+
+  .title-link {
+    text-decoration: none;
+  }
+
+  .github-link {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}

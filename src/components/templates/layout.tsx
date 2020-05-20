@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql, useStaticQuery } from "gatsby"
 
-import Header from "./molecules/Header/header"
+import Header from "../organisms/Header/header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={"jp's blog"} />
       <div
         style={{
           margin: `0 auto`,
