@@ -2,16 +2,20 @@
 
 .site-header-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
+  justify-content: center;
+  background-color: #e8f5e9;
 
   .title-link {
     text-decoration: none;
+    color: $primary-color;
   }
 
   .github-link {
     width: 1.6rem;
     height: 1.6rem;
   }
+}
+
+.mdc-top-app-bar--short-collapsed {
+  width: 100px;
 }

@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={"jp's blog"} />
+      <Header siteTitle={"jp"} />
       <div
         style={{
           margin: `0 auto`,
