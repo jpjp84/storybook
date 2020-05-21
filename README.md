@@ -23,3 +23,7 @@
 - 1일 1알고리즘 (Kotlin)
 - Kotlin 스터디 (Kotlin in Action)
 - 안드로이드 미니 프로젝트
+
+## Project Require
+- .env
+  - NOTION_TOKEN : 노션 `token_v2`

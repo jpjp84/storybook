@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -48,6 +52,28 @@ module.exports = {
         implementation: require("sass"),
         webpackImporter: false
       }
-    }
+    },
+    {
+      resolve: `gatsby-source-notion-contents`,
+      options: {
+        token: process.env.NOTION_TOKEN,
+        ids: ["0b55f2523260415596a5d4b916e804d9"]
+      }
+    },
+    {
+      resolve: 'gatsby-source-notionso',
+      options: {
+        name: "blog",
+        rootPageUrl: "https://www.notion.so/Programming-b7997e26c81145f48097454c0a4fdd0d",
+        debug: false,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
   ]
 }

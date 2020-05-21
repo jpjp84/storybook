@@ -7,6 +7,8 @@
   "dependencies": {
     "@material/react-top-app-bar": "^0.15.0",
     "autoprefixer": "^9.8.0",
+    "bulma": "^0.8.2",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.21.22",
     "gatsby-image": "^2.4.3",
     "gatsby-plugin-manifest": "^2.4.2",
@@ -17,6 +19,7 @@
     "gatsby-plugin-sharp": "^2.6.2",
     "gatsby-source-filesystem": "^2.3.1",
     "gatsby-transformer-sharp": "^2.5.2",
+    "highlight.js": "^10.0.3",
     "node-sass": "^4.14.1",
     "postcss-preset-env": "^6.7.0",
     "prop-types": "^15.7.2",
