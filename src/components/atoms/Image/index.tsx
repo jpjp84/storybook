@@ -19,7 +19,7 @@ interface ImageProps {
   className?: string
 }
 
-const Index: React.FC<ImageProps> = ({ fileName, alt = "", className }) => (
+const Image: React.FC<ImageProps> = ({ fileName, alt = "", className }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -58,4 +58,4 @@ const Index: React.FC<ImageProps> = ({ fileName, alt = "", className }) => (
     }}
   />
 )
-export default Index
+export default Image
