@@ -61,5 +61,11 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 versions",
+    "Firefox >= 20",
+    "iOS >=7"
+  ]
 }

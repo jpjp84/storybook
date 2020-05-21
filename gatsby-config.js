@@ -42,7 +42,7 @@ module.exports = {
       options: {
         postCssPlugins: [
           require(`postcss-preset-env`)({ stage: 2 }),
-          require(`autoprefixer`)({ browsers: ["> 1%", "last 3 versions", "Firefox >= 20", "iOS >=7"] })
+          require(`autoprefixer`)
         ],
         includePaths: ["./node_modules"],
         implementation: require("sass"),
