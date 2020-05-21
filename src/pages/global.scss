@@ -1,9 +1,10 @@
 @import "../resources/_color";
+@import "./mdc-theme";
 
 $font-stack: Helvetica, sans-serif;
 
 body {
   font: 100% $font-stack;
-  color: $primary-color;
+  background-color: $primary-color;
   margin: 0;
 }

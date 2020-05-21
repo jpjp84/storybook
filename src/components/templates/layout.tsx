@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={"jp"} />
       <div
         style={{
-          margin: `0 auto`,
+          margin: `56px auto`,
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
         }}
