@@ -2,16 +2,14 @@ declare module "notion" {
 
   export interface Notion {
     allNotionPageBlog: {
-      edges: Node[]
+      edges: Array<{ node: NotionNode }>
     };
   }
 
-  export interface Node {
-    node: {
-      title: string;
-      slug: string;
-      excerpt: string;
-      pageIcon: string;
-    }
+  export interface NotionNode {
+    title: string;
+    slug: string;
+    excerpt: string;
+    pageIcon: string;
   }
 }
