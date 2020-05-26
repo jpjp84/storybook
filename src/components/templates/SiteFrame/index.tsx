@@ -4,38 +4,32 @@ import { BaseViewProps } from "view"
 
 import Header from "../../organisms/Header/header"
 
-import "./layout.scss"
+import "./siteFrame.scss"
 
 const Frame: React.FC<BaseViewProps> = ({ children }) => {
-  const notion = useStaticQuery(graphql`
-    query Notion {
-      allNotionContent {
-        edges {
-          node {
-            id
-            contentType
-            internal {
-              # ... other properties of internal
-              content
-              description
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const notion = useStaticQuery(graphql`
+  //   query Notion {
+  //     allNotionContent {
+  //       edges {
+  //         node {
+  //           id
+  //           contentType
+  //           internal {
+  //             # ... other properties of internal
+  //             content
+  //             description
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <>
-      <Header siteTitle={"JP.LOG"}/>
+      <Header siteTitle={"JP.DEV"}/>
       <div className={"content-wrapper"}>
-        {notion.allNotionContent.edges.map(({ node: { id, internal: { description: title } } }) => (
-          <li key={id}>
-            <Link to={`/${id}`}>
-              {title}
-            </Link>
-          </li>
-        ))}
+        {children}
       </div>
       <footer>
         © {new Date().getFullYear()}, Built with

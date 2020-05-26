@@ -1,7 +1,38 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+/* eslint-disable */
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ graphql, actions, reporter }, options) => {
+  const { createPage } = actions;
+
+  const pageTemplate = require.resolve('./src/components/templates/Page');
+
+  const result = await graphql(
+    `
+      query {
+        allNotionPageBlog {
+          edges {
+            node {
+              pageId
+              slug
+            }
+          }
+        }
+      }
+    `,
+  );
+  if (result.errors) {
+    reporter.panic('error loading events', result.errors);
+    return;
+  }
+
+  result.data.allNotionPageBlog.edges.forEach(({ node }) => {
+    const path = `/article/${node.slug}`;
+    createPage({
+      path,
+      component: pageTemplate,
+      context: {
+        pathSlug: path,
+        pageId: node.pageId,
+      },
+    });
+  });
+};

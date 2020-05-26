@@ -1,3 +1,5 @@
+const path = require('path');
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -9,7 +11,7 @@ module.exports = {
     author: `@gatsbyjs`
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+      `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -54,17 +56,11 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-notion-contents`,
-      options: {
-        token: process.env.NOTION_TOKEN,
-        ids: ["0b55f2523260415596a5d4b916e804d9"]
-      }
-    },
-    {
       resolve: 'gatsby-source-notionso',
       options: {
-        name: "blog",
-        rootPageUrl: "https://www.notion.so/Programming-b7997e26c81145f48097454c0a4fdd0d",
+        name: 'Blog',
+        tokenv2: process.env.NOTION_TOKEN,
+        rootPageUrl: "https://www.notion.so/Export-Blog-0b55f2523260415596a5d4b916e804d9",
         debug: false,
       },
     },
