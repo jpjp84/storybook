@@ -1,15 +1,20 @@
-/* eslint-disable */
+import React from "react"
+import { graphql } from "gatsby"
+import { NotionContext, NotionPage } from "notion"
 
-import React from 'react';
-import { graphql } from 'gatsby';
-import notionRendererFactory from 'gatsby-source-notionso/lib/renderer';
-import Layout from '../../molecules/Layout';
-import NotionBlockRenderer from '../../molecules/NotionRenderBlock';
+import Layout from "../../molecules/Layout"
+import NotionBlockRenderer from "../../molecules/NotionRenderBlock"
 
-const Template = ({ data, pageContext }) => {
-  const notionRenderer = notionRendererFactory({
-    notionPage: data.notionPageBlog,
-  });
+import useNotionRendererFactory from "../../../hooks/useNotionRendererFactory"
+
+interface TemplateProps {
+  data: NotionPage;
+  pageContext: NotionContext;
+}
+
+const Template: React.FC<TemplateProps> = ({ data, pageContext }) => {
+  const notionRenderer = useNotionRendererFactory(data)
+
   return (
     <Layout meta>
       <NotionBlockRenderer
@@ -18,8 +23,10 @@ const Template = ({ data, pageContext }) => {
         debug={false}
       />
     </Layout>
-  );
-};
+  )
+}
+
+export default Template
 
 export const query = graphql`
   query($pageId: String!) {
@@ -51,6 +58,4 @@ export const query = graphql`
       indexPage
     }
   }
-`;
-
-export default Template;
+`

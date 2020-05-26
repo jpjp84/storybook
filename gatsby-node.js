@@ -3,7 +3,7 @@
 exports.createPages = async ({ graphql, actions, reporter }, options) => {
   const { createPage } = actions;
 
-  const pageTemplate = require.resolve('./src/components/templates/Page');
+  const pageTemplate = require.resolve('./src/components/templates/Page/index.tsx');
 
   const result = await graphql(
     `
